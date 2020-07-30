@@ -1,126 +1,88 @@
 <html>
+
+<head>
+	<style>
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: Georgia, 'Times New Roman', Times, serif;
+		}
+
+		.container {
+			width: 50em;
+			margin: auto;
+		}
+
+		.nav {
+			padding: 1em;
+			text-align: right;
+		}
+
+		.nav>span {
+			padding-left: 1em;
+		}
+
+		p,
+		li {
+			line-height: 2.0;
+		}
+
+		h1 {
+			text-align: center;
+			border-bottom: 4px solid black;
+			padding-bottom: 0.9em;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		a {
+			text-decoration: none;
+			color: crimson;
+		}
+	</style>
+</head>
+
 <body>
-<canvas id="canvas"></canvas>
-<script>
+	<div class="container">
 
-Star = function(x, y, phase, speed) {
-	this.x = x;
-	this.y = y;
-	this.phase = phase;
-	this.speed = speed;
-}
+		<div class="nav">
+			<span><a href="https://github.com/seanshahkarami">GitHub</a></span>
+			<span><a href="mailto:sean.shahkarami@gmail.com">Email</a></span>
+		</div>
 
-var canvas = document.getElementById('canvas');
-canvas.width = screen.width;
-canvas.height = screen.height;
-var context = canvas.getContext("2d");
+		<div class="main">
+			<h1>Sean Shahkarami</h1>
 
-////////////////////////////////////////////////////////
-// cache static background
-////////////////////////////////////////////////////////
-var background = document.createElement('canvas');
-background.width = canvas.width;
-background.height = canvas.height;
-var backgroundContext = background.getContext('2d');
+			<p>Hello, I'm Sean, a software developer with a strong background in mathematics.</p>
 
-// render gradient to background context
-var gradient = backgroundContext.createLinearGradient(0, 0, 0, canvas.height);
-gradient.addColorStop(0, 'rgb(12, 0, 34)');
-gradient.addColorStop(1, 'rgb(30, 0, 160)');
-backgroundContext.rect(0, 0, background.width, background.height);
-backgroundContext.fillStyle = gradient;
-backgroundContext.fill();
+			<p>I'm an avid developer and have been since about 2004. My formal education is in pure and applied math
+				with a strong emphasis on computing. Along the way, I've picked up a many practical skills and developed
+				a well-rounded skillset. These days, I'm looking towards the exciting AI/ML space to see what I can do
+				there.</p>
 
-////////////////////////////////////////////////////////
-// cache static foreground
-////////////////////////////////////////////////////////
-var foreground = document.createElement('canvas');
-foreground.width = canvas.width;
-foreground.height = canvas.height;
-var foregroundContext = foreground.getContext('2d');
+			<p>I currently work as a programmer at Argonne National Lab on the <a href="https://wa8.gl">Waggle</a> and
+				<a href="https://sagecontinuum.org">Sage</a> projects where I'm helping fuel future science
+				by building scientific cyberinfrastructure to support AI/ML applications at the edge.</p>
 
-function generateMountain(x1, y1, x2, y2, range) {
-	if (x2 - x1 > 1) {
-		xm = Math.floor((x1 + x2) / 2);
-		ym = Math.floor((y1 + y2) / 2 + (Math.random() - 0.5) * range);
-		generateMountain(x1, y1, xm, ym, range / 2);
-		generateMountain(xm, ym, x2, y2, range / 2);
-	} else {
-		foregroundContext.beginPath();
-		foregroundContext.moveTo(x1, y1);
-		foregroundContext.lineTo(x2, y2);
-		foregroundContext.lineTo(x2, canvas.height);
-		foregroundContext.lineTo(x1, canvas.height);
-		foregroundContext.closePath();
-		foregroundContext.fill();
-	}
-}
+			<p>I believe that working in a small team has provided me a lot of experience in a short time. I've
+				taken ownership of and worked on a wide range of technical problems such as building
+				data pipelines with RabbitMQ and Cassandra, developing firmware for embedded systems, developing
+				interactive QA software for our hardware assembly process, and much more.</p>
 
-function generateStars(count) {
-	var stars = [];
-	
-	for (var i = 0; i < count; i++) {
-		stars.push(new Star(
-			Math.random() * canvas.width,
-			Math.random() * canvas.height,
-			2.0 * Math.PI * Math.random(),
-			Math.random() * 0.05
-		));
-	}
-	
-	return stars;
-}
 
-function drawStars() {
-	for (var i = 0; i < stars.length; i++) {
-		var star = stars[i];
-		var t = (Math.sin(star.phase) + 1.0) / 2.5;
-		
-		star.phase += star.speed;
-		
-		context.strokeStyle = "rgba(" + [255, 255, 255, t].join() + ")";
-		context.beginPath();
-		context.moveTo(star.x-t, star.y-t);
-		context.lineTo(star.x+t, star.y+t);
-		context.moveTo(star.x-t, star.y+t);
-		context.lineTo(star.x+t, star.y-t);
-		context.stroke();
-		
-		//context.drawImage(starImage, star.x, star.y);
-	}
-}
+			<h2>Formal Background</h2>
 
-canvas.onclick = function(event) {
-	if(canvas.requestFullScreen) {
-		canvas.requestFullScreen();
-	} else if (canvas.webkitRequestFullScreen) {
-		canvas.webkitRequestFullScreen();
-	} else if (canvas.mozRequestFullScreen) {
-		canvas.mozRequestFullScreen();
-	}
-		
-	canvas.onclick = function(event) {
-		stars = generateStars(Math.floor(canvas.width * canvas.height * 0.0005));
-		foregroundContext.clearRect(0, 0, foreground.width, foreground.height);
-		generateMountain(0, canvas.height * 0.80, canvas.width, canvas.height * 0.65, canvas.height * 0.45);
-	}
-}
-
-var pairs = [];
-var stars = generateStars(Math.floor(canvas.width * canvas.height * 0.0005));
-
-foregroundContext.clearRect(0, 0, foreground.width, foreground.height);
-generateMountain(0, canvas.height * 0.80, canvas.width, canvas.height * 0.65, canvas.height * 0.45);
-
-function drawScene() {
-	context.drawImage(background, 0, 0);
-	drawStars();
-	context.drawImage(foreground, 0, 0);
-	requestAnimationFrame(drawScene);
-}
-
-requestAnimationFrame(drawScene);
-
-</script>
+			<ul>
+				<li>Software Developer, Argonne National Lab. 2016-present.</li>
+				<li>Progress towards Ph.D. in Mathematics, University of Illinois at Urbana-Champaign. 2011-2016.</li>
+				<li>Math and Computer Science Intern, Argonne National Lab. Summer 2015.</li>
+				<li>Computational Bootcamp Instructor, University of Illinois at Urbana-Champaign. Summer 2014, 2015.
+				</li>
+				<li>M.S. in Mathematics, University of Illinois at Urbana-Champaign. 2011-2013.</li>
+				<li>B.A. in Mathematics with Minor in CS, University of Illinois at Urbana-Champaign. 2007-2011.</li>
+			</ul>
+		</div>
+	</div>
 </body>
+
 </html>
