@@ -1,0 +1,81 @@
+<html>
+<head>
+	<script src="vector.js"></script>
+	<script src="scene.js"></script>
+</head>
+<body>
+<canvas id="canvas" width="512" height="512"></canvas>
+<script>
+
+function put(x, y, r, g, b) {
+	index = 4 * (x + canvas.width * y);
+	imageData.data[index+0] = r;
+	imageData.data[index+1] = g;
+	imageData.data[index+2] = b;
+	imageData.data[index+3] = 255;
+}
+
+var canvas = document.getElementById("canvas");
+var context = canvas.getContext("2d");
+var imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+
+var camera = new Vector(0.0, 0.0, -18.0);
+
+var scene = new Scene();
+
+var object = new PointLight(new Vector(100, -100, -20), 0.20);
+scene.addObject(object);
+
+var object = new PointLight(new Vector(80, -300, 5), 0.35);
+scene.addObject(object);
+
+var object = new PointLight(new Vector(-400, -50, 5), 1.0);
+scene.addObject(object);
+
+var object = new PointLight(new Vector(0, -2, 5), 0.1);
+scene.addObject(object);
+
+var object = new Sphere(new Vector(30, 0, 30), 20);
+object.diffuse = 0.8;
+object.reflect = 1.0;
+object.color = new Color(60, 60, 80);
+scene.addObject(object);
+
+var object = new Sphere(new Vector(-80, 0, 80), 30);
+object.diffuse = 0.8;
+object.reflect = 1.0;
+object.color = new Color(60, 80, 60);
+scene.addObject(object);
+
+var object = new Sphere(new Vector(-50, -100, 150), 50);
+object.diffuse = 0.8;
+object.reflect = 1.0;
+object.color = new Color(80, 60, 60);
+scene.addObject(object);
+
+var object = new Sphere(new Vector(-80, 0, 20), 20);
+object.diffuse = 0.8;
+object.reflect = 1.0;
+object.color = new Color(80, 80, 60);
+scene.addObject(object);
+
+var object = new Plane(new Vector(-500, 50, 0), new Vector(1000, 0, 0), new Vector(0, 0, 300));
+object.diffuse = 0.8;
+object.reflect = 0.2;
+object.color = new Color(120, 120, 120);
+scene.addObject(object);
+
+for (var y = 0; y < canvas.height; y++) {
+	for (var x = 0; x < canvas.width; x++) {
+		var direction = new Vector((x - 256) / 100, (y - 256) / 100, 1.0);
+		var ray = new Ray(camera, direction);
+		var color = scene.trace(ray, 0);
+		put(x, y, color.r, color.g, color.b);
+	}
+}
+
+context.putImageData(imageData, 0, 0);
+
+</script>
+</body>
+</html>
