@@ -7,7 +7,7 @@ render() {
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Sean Shahkarami's Website | Home</title>
+<title>Sean Shahkarami's Website</title>
 <meta name="description" content="My personal website for things I like.">
 <meta name=”robots” content="index, follow">
 <!-- This page's style is inspired by https://github.com/roryg/ghostwriter and Tom Christie's page. -->
