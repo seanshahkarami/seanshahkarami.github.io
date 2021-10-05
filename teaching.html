@@ -1,8 +1,3 @@
-#!/bin/sh -e
-
-render() {
-    content=$(cat "$1")
-    cat <<EOF
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,16 +18,14 @@ render() {
 <span><a href="https://github.com/seanshahkarami">GitHub</a></span>
 <span><a href="mailto:sean.shahkarami@gmail.com">Email</a></span>
 </div>
-${content}
+<h1>Teaching</h1>
+
+<h3><a href="cbmg-2015/index.html">CBMG 2015</a></h3>
+<p>This is material for a two week intensive course on programming and scientific computing I developed and lead
+	in summer 2015 for math grad students at University of Illinois at Urbana-Champaign.</p>
+<p>If you find it useful, please let me know! I'd love to hear that others have benefited
+	from it beyond just my class. Sadly, the original notebooks have been lost, so only the HTML renderings
+	remain.</p>
 </div>
 </body>
 </html>
-EOF
-}
-
-# make working directory same as this script
-cd $(dirname $0)
-
-for f in pages/*.html; do
-    render "$f" > ../$(basename "$f")
-done
