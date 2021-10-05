@@ -29,6 +29,9 @@ ${content}
 EOF
 }
 
+# make working directory same as this script
+cd $(dirname $0)
+
 for f in pages/*.html; do
     render "$f" > ../$(basename "$f")
 done
