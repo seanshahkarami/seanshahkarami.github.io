@@ -33,6 +33,7 @@ EOF
 # make working directory same as this script
 cd $(dirname $0)
 
+# build all /pages into /docs
 for f in pages/*.html; do
     fout=docs/$(basename "$f")
     echo "render $f to $fout"
