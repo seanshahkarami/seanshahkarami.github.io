@@ -34,5 +34,7 @@ EOF
 cd $(dirname $0)
 
 for f in pages/*.html; do
-    render "$f" > ../$(basename "$f")
+    fout=docs/$(basename "$f")
+    echo "render $f to $fout"
+    render "$f" > "$fout"
 done
