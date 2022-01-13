@@ -1,7 +1,7 @@
 #!/bin/sh -e
 
 render() {
-    content=$(cat "$1")
+    content=$(pandoc "$1")
     cat <<EOF
 <!DOCTYPE html>
 <html>
@@ -34,8 +34,9 @@ EOF
 cd $(dirname $0)
 
 # build all /pages into /docs
-for f in pages/*.html; do
-    fout=docs/$(basename "$f")
+for f in pages/*.*; do
+    # output to docs dir as .html file
+    fout=docs/$(basename "$f" | sed 's/\..*$/.html/')
     echo "render $f to $fout"
     render "$f" > "$fout"
 done

@@ -18,40 +18,22 @@
 <span><a href="https://github.com/seanshahkarami">GitHub</a></span>
 <span><a href="mailto:sean.shahkarami@gmail.com">Email</a></span>
 </div>
-<h1>Random</h1>
-
-<p>These are things I've created that I think are cool.</p>
-
-<h3><a href="mooseheart.html">Mooseheart</a></h3>
-<p>A cute "screensaver" which generates a random night sky each time you click on it.</p>
-
-<h3><a href="tracy.html">Tracy</a></h3>
+<h1 id="random">Random</h1>
+<p>These are things I’ve created that I think are cool.</p>
+<h3 id="mooseheart"><a href="mooseheart.html">Mooseheart</a></h3>
+<p>A cute “screensaver” which generates a random night sky each time you click on it.</p>
+<h3 id="tracy"><a href="tracy.html">Tracy</a></h3>
 <p>A basic ray tracer which displays some nice looking metallic spheres.</p>
-
-<h3><a href="https://github.com/seanshahkarami/seanshahkarami.github.io/blob/main/docs/noice.py">Noice</a></h3>
-<p><a href="https://www.streamlit.io">Streamlit</a> example of generating cool images from random noise. To run
-	it, you'll need make sure you have the required packages, then you can use "streamlit run" directly from the
-	web.</p>
-<p><small>
-		<tt>pip3 install numpy scipy matplotlib streamlit</tt><br />
-		<tt>streamlit run
-			https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py</tt>
-	</small></p>
-
-
-<h3><a href="https://github.com/seanshahkarami/docker-image-pull-size">Docker Data Pull Estimator</a></h3>
-
-<p>This is a tool I wrote to (approximately) answer the question "How much data will be downloaded when pulling a series
-	of
-	Docker images?"</p>
-
-<p>The interesting bit of this is keeping track of the shared layers between images and giving
-	a useful summary to the user at each step.</p>
-
-<p>This was motivated at my job with the <a href="https://sagecontinuum.org/">Sage</a> project. Our team and users
-	build on top of a core set of Docker base images. Some of are quite large (~5GB), so we try to preload them on our
-	edge devices to reduce network bandwidth. This tool allowed me to quickly simulate the data cost of a series of
-	pulls with various preload strategies.</p>
+<h3 id="noice"><a href="https://github.com/seanshahkarami/seanshahkarami.github.io/blob/main/docs/noice.py">Noice</a></h3>
+<p><a href="https://www.streamlit.io">Streamlit</a> example of generating cool images from random noise. To run it, you’ll need make sure you have the required packages, then you can use “streamlit run” directly from the web.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">pip3</span> install numpy scipy matplotlib streamlit</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">streamlit</span> run <span class="dt">\</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py</span></code></pre></div>
+<h3 id="docker-data-pull-estimator"><a href="https://github.com/seanshahkarami/docker-image-pull-size">Docker Data Pull Estimator</a></h3>
+<p>This is a tool I wrote to (approximately) answer the question “How much data will be downloaded when pulling a series of Docker images?”</p>
+<p>The interesting bit of this is keeping track of the shared layers between images and giving a useful summary to the user at each step.</p>
+<p>This was motivated at my job with the <a href="https://sagecontinuum.org">Sage</a> project. Our team and users build on top of a core set of Docker base images. Some of are quite large (~5GB), so we try to preload them on our edge devices to reduce network bandwidth. This tool allowed me to quickly simulate the data cost of a series of pulls with various preload strategies.</p>
 </div>
 </body>
 </html>
