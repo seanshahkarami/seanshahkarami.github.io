@@ -17,3 +17,18 @@
 		<tt>streamlit run
 			https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py</tt>
 	</small></p>
+
+
+<h3><a href="https://github.com/seanshahkarami/docker-image-pull-size">Docker Data Pull Estimator</a></h3>
+
+<p>This is a tool I wrote to (approximately) answer the question "How much data will be downloaded when pulling a series
+	of
+	Docker images?"</p>
+
+<p>The interesting bit of this is keeping track of the shared layers between images and giving
+	a useful summary to the user at each step.</p>
+
+<p>This was motivated at my job with the <a href="https://sagecontinuum.org/">Sage</a> project. Our team and users
+	build on top of a core set of Docker base images. Some of are quite large (~5GB), so we try to preload them on our
+	edge devices to reduce network bandwidth. This tool allowed me to quickly simulate the data cost of a series of
+	pulls with various preload strategies.</p>
