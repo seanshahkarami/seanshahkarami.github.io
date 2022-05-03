@@ -1,4 +1,4 @@
-# Random
+# Projects
 
 These are things I've created that I think are cool.
 

@@ -18,7 +18,7 @@ render() {
 <div class="nav">
 <span><a href="index.html">Home</a></span>
 <span><a href="teaching.html">Teaching</a></span>
-<span><a href="random.html">Random</a></span>
+<span><a href="projects.html">Projects</a></span>
 <span><a href="resume-sean-shahkarami.pdf">Resume</a></span>
 <span><a href="https://github.com/seanshahkarami">GitHub</a></span>
 <span><a href="mailto:sean.shahkarami@gmail.com">Email</a></span>
