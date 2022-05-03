@@ -20,6 +20,20 @@
 </div>
 <h1 id="random">Random</h1>
 <p>These are things I’ve created that I think are cool.</p>
+<h3 id="docker-data-pull-estimator"><a
+href="https://github.com/seanshahkarami/docker-image-pull-size">Docker
+Data Pull Estimator</a></h3>
+<p>This is a tool I wrote to (approximately) answer the question “How
+much data will be downloaded when pulling a series of Docker
+images?”</p>
+<p>The interesting bit of this is keeping track of the shared layers
+between images and giving a useful summary to the user at each step.</p>
+<p>This was motivated at my job with the <a
+href="https://sagecontinuum.org">Sage</a> project. Our team and users
+build on top of a core set of Docker base images. Some of are quite
+large (~5GB), so we try to preload them on our edge devices to reduce
+network bandwidth. This tool allowed me to quickly simulate the data
+cost of a series of pulls with various preload strategies.</p>
 <h3 id="probe-memory-model"><a
 href="https://github.com/seanshahkarami/probe-memory-model">Probe Memory
 Model</a></h3>
@@ -42,20 +56,6 @@ directly from the web.</p>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">streamlit</span> run <span class="dt">\</span></span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py</span></code></pre></div>
-<h3 id="docker-data-pull-estimator"><a
-href="https://github.com/seanshahkarami/docker-image-pull-size">Docker
-Data Pull Estimator</a></h3>
-<p>This is a tool I wrote to (approximately) answer the question “How
-much data will be downloaded when pulling a series of Docker
-images?”</p>
-<p>The interesting bit of this is keeping track of the shared layers
-between images and giving a useful summary to the user at each step.</p>
-<p>This was motivated at my job with the <a
-href="https://sagecontinuum.org">Sage</a> project. Our team and users
-build on top of a core set of Docker base images. Some of are quite
-large (~5GB), so we try to preload them on our edge devices to reduce
-network bandwidth. This tool allowed me to quickly simulate the data
-cost of a series of pulls with various preload strategies.</p>
 </div>
 </body>
 </html>
