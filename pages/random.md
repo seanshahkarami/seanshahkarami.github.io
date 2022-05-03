@@ -2,6 +2,10 @@
 
 These are things I've created that I think are cool.
 
+### [Probe Memory Model](https://github.com/seanshahkarami/probe-memory-model)
+
+A tool which implements a few of the memory model probes discussed in [Russ Cox's fantastic "Hardware Memory Models" blog post](https://research.swtch.com/hwmm).
+
 ### [Mooseheart](mooseheart.html)
 
 A cute "screensaver" which generates a random night sky each time you click on it.
