@@ -36,6 +36,5 @@ web.
 ```sh
 pip3 install numpy scipy matplotlib streamlit
 
-streamlit run \
-	https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py
+streamlit run https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/docs/noice.py
 ```
