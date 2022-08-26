@@ -2,17 +2,18 @@
 <html>
 <head>
     <style>
-        #canvas {
-            padding: 0;
-            padding-top: 200px;
-            margin: 0 auto;
-            display: block;
+        .container {
+            display: grid;
+            place-items: center;
+            min-height: 100vh;
         }
     </style>
 </head>
 <body>
 
+<div class="container">
 <canvas id="canvas"></canvas>
+</div>
 
 <script>
     // I got inspired to do a web port of Bongo Cat after seeing it animated on a Satisfaction 75 keyboard.
