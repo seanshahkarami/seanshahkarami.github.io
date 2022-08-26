@@ -27,6 +27,12 @@ A cute "screensaver" which generates a random night sky each time you click on i
 
 A basic ray tracer which displays some nice looking metallic spheres.
 
+### [Bongo](bongo.html)
+
+I got inspired to do a web port of Bongo Cat after seeing it animated on a Satisfaction 75 keyboard. Type away... :)
+
+_The main reference I used was [this repo](https://github.com/pedker/OLED-BongoCat-Revision). Thanks so much!_
+
 ### [Noice](https://github.com/seanshahkarami/seanshahkarami.github.io/blob/main/docs/noice.py)
 
 [Streamlit](https://www.streamlit.io) example of generating cool images from random noise. To run
