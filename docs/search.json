@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "teaching.html",
+    "href": "teaching.html",
+    "title": "Teaching",
+    "section": "",
+    "text": "This is material for a two week intensive course on programming and scientific computing I developed and led in summer 2015 for math grad students at University of Illinois at Urbana-Champaign.\nIf you find it useful, please let me know! I’d love to hear that others have benefited from it beyond just my class. Sadly, the original notebooks have been lost, so only the HTML renderings remain."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Docker Data Pull Estimator\nThis is a tool I wrote to (approximately) answer the question “How much data will be downloaded when pulling a series of Docker images?”\nThe interesting bit of this is keeping track of the shared layers between images and giving a useful summary to the user at each step.\nThis was motivated at my job with the Sage project. Our team and users build on top of a core set of Docker base images. Some of are quite large (~5GB), so we try to preload them on our edge devices to reduce network bandwidth. This tool allowed me to quickly simulate the data cost of a series of pulls with various preload strategies.\n\n\nProbe Memory Model\nA tool which implements a few of the memory model probes discussed in Russ Cox’s fantastic “Hardware Memory Models” blog post.\n\n\nMooseheart\nA cute “screensaver” which generates a random night sky each time you click on it.\n\n\nTracy\nA basic ray tracer which displays some nice looking metallic spheres.\n\n\nBongo\nI got inspired to do a web port of Bongo Cat after seeing it animated on a Satisfaction 75 keyboard. Type away… :)\nThe main reference I used was this repo. Thanks so much!\n\n\nNoice\nStreamlit example of generating cool images from random noise. To run it, you’ll need make sure you have the required packages, then you can use “streamlit run” directly from the web.\npip3 install numpy scipy matplotlib streamlit\n\nstreamlit run https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/static/noice.py"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Home",
+    "section": "",
+    "text": "I’m a software developer and have been an avid programmer since about 2004. My formal education is in pure and applied math with a strong emphasis on computing.\nAlong the way, I’ve worked on lots of different problems which has helped me develop a well-rounded skillset. These days, I’m looking forward to what I can do in the exciting AI/ML space.\nI’m currently a software developer at Argonne National Lab for the Waggle and Sage projects where I’m helping fuel future science by building scientific cyberinfrastructure for AI/ML applications at the edge."
+  }
+]

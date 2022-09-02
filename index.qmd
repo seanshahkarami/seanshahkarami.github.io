@@ -1,4 +1,6 @@
-# Home
+---
+title: "Home"
+---
 
 Hello! I'm Sean Shahkarami!
 

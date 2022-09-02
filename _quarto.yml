@@ -1,0 +1,23 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  navbar:
+    left:
+      - index.qmd
+      - projects.qmd
+      - teaching.qmd
+      - text: "Resume"
+        file: "static/resume-sean-shahkarami.pdf"
+    right:
+      - icon: "github"
+        href: "https://github.com/seanshahkarami"
+      - icon: "email"
+        href: "mailto:sean.shahkarami@mgmail.com"
+
+format:
+  html:
+    theme: solar
+    css: styles.css
+    toc: false
