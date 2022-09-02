@@ -313,7 +313,7 @@
     let framesSinceKeyPress = 100000;
     let wantPrepFrame = true
 
-    window.onkeypress = function() {
+    window.onkeypress = window.onclick = function() {
         framesSinceKeyPress = 0
     }
 
