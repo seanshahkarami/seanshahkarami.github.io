@@ -11,10 +11,10 @@ website:
       - text: "Resume"
         file: "static/resume-sean-shahkarami.pdf"
     right:
+      - icon: "envelope"
+        href: "mailto:sean.shahkarami@mgmail.com"
       - icon: "github"
         href: "https://github.com/seanshahkarami"
-      - icon: "email"
-        href: "mailto:sean.shahkarami@mgmail.com"
 
 format:
   html:
