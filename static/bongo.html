@@ -313,9 +313,13 @@
     let framesSinceKeyPress = 100000;
     let wantPrepFrame = true
 
-    window.onkeypress = window.onclick = function() {
-        framesSinceKeyPress = 0
+    function onInput() {
+        framesSinceKeyPress = 0;
     }
+
+    window.addEventListener("keypress", onInput);
+    window.addEventListener("click", onInput);
+    window.addEventListener("touchend", onInput);
 
     function animate() {
         if (framesSinceKeyPress <= 1) {
