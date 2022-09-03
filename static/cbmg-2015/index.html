@@ -1,0 +1,135 @@
+<html>
+  <head>
+    <title>CBMG 2015</title>
+    <style>
+      h1, h2, h3, h4, h5, h6, small { font-family: sans-serif; font-weight: lighter; }
+      p { font-family: sans-serif; font-weight: lighter; }
+      a { text-decoration: none; color: cornflowerblue; }
+      a:hover { color: crimson;}
+      h1 { text-align: center; }
+      h2 { text-align: center; }
+
+	small { text-align: left; }
+
+      #journal { width: 40em; padding-top: 0.005em;}
+      #journal h3 { text-align: left; }
+      #journal h4 { text-align: left; }
+      #journal h5 { text-align: left; }
+      #journal p { text-align: left; font-size: small; }
+      #journal section { padding-top: 1em }
+    </style>
+  </head>
+  <body>
+    
+    <h1>CBMG 2015</h1>
+
+    <div align="center"><div id="journal">
+    <h2>Daily Routine</h2>
+
+    <p>We'll meet at 9am in Altgeld Hall 239 and go over the previous day's projects. Then, we'll cover new concepts with hands-on exercises along the way. Finally, we'll break for lunch at 12:00 until 1:30 and then finish the day with some projects covering the newly introduced concepts.</p>
+    </div></div>
+
+    <div align="center"><div id="journal">
+    <h2>Activity Log</h2>
+
+    <section>
+      <h3>Day 1: Programming in Python</h3>
+      <h4>Summary</h4>
+      <p>Discussed printing output, basic expressions, conditionals, functions and looping. Also briefly introduced the assert statement as a rudimentary way to test code.</p>
+      <h5><a href="python.html">Notes</a></h5>
+      <h5><a href="python-exercises.html">Exercises</a></h5>
+      <h5><a href="project1.html">Projects</a></h5>
+    </section>
+
+    <section>
+      <h3>Day 2: Basic Data Structures</h3>
+      <h4>Summary</h4>
+      <p>Introduced a few fundamental data structures in Python: Lists, tuples, dictionaries and sets. Also introduced generator and iterator based techniques in light of some questions which were asked. As a reminder, we saw some compact ways to construct lists, sets and use generators with functions like <tt>min</tt>, <tt>max</tt> and <tt>sum</tt>.</p>
+      <h5><a href="data-structures.html">Notes</a></h5>
+      <h5><a href="data-structures-exercises.html">Exercises</a></h5>
+      <h5><a href="project2.html">Projects</a></h5>
+    </section>
+
+    <section>
+      <h3>Day 3: File and String Processing</h3>
+      <h4>Summary</h4>
+      <p>We started out with a brief intro to getting around a Linux system and manipulating files. Then, we saw the basics of opening files and reading and writing their contents. Along the way we covered basic string processing and formatting. We closed the day with some first steps towards basic analysis and visualization on our sample client data using <a href="http://www.scipy.org">Scipy</a> and <a href="http://matplotlib.org">Matplotlib</a>.</p>
+	  <h5><a href="files-strings.html">Notes</a></h5>
+      <h5><a href="files-strings-exercises.html">Exercises</a></h5>
+      <h5><a href="project3.html">Projects</a></h5>
+	  <h5><a href="clients.txt">Client Data File</a></h5>
+	  <h5><a href="email-addr.txt">Email Address Data File</a></h5>
+    </section>
+
+
+    <section>
+      <h3>Day 4: Overview of Numpy</h3>
+      <h4>Summary</h4>
+      <p>Today was a broad overview of Numpy arrays and features. We saw how to construct arrays, including helper functions for common ones like uniform subdivision of an interval or a bunch of zeros. We also saw some basic operations, functions and restructuring methods like stacking and reshaping. Finally, we did a little bit of 2D computation and plotting.</p>
+	  <h5><a href="numpy.html">Notes</a></h5>
+      <h5><a href="numpy-exercises.html">Exercises</a></h5>
+      <h5><a href="project4.html">Projects</a></h5>
+      <h5><a href="anim.py">Game of Life Example</a></h5>
+    </section>
+
+
+    <section>
+      <h3>Day 5: Numerical Linear Algebra 1</h3>
+      <h4>Summary</h4>
+      <p>Introduced direct and iterative solvers. The main examples we used were the LU-factorization approach to solving systems and GMRES / CG as iterative solvers. Sparse representation also showed up in regard to iterative solvers. Finally, I mentioned conditioning briefly, in the context of wanting small changes in the problem to only induce small changes in the solution. In particular, systems which have nearly linearly dependent columns tend to be poorly conditioned.</p>
+      <h5><a href="linalg1-exercises.html">Exercises</a></h5>
+      <h5><a href="project5.html">Projects</a></h5>
+    </section>
+
+
+    <section>
+      <h3>Day 6: Numerical Linear Algebra 2 + Data Fitting</h3>
+      <h4>Summary</h4>
+      <p>Completed our coverage of fundamental numerical linear algebra tools like linear least squares and eigenvalue computations. We applied linear least squares to do some data regression and fitting. We also looked at more general data fitting using Numpy's <tt>polyfit</tt> and <tt>poly1d</tt> interface as well as spline fitting using Scipy's 1D spline interface.</p>
+	  <h5><a href="notes6.html">Notes</a></h5>
+      <h5><a href="linalg2-fitting.html">Exercises</a></h5>
+      <h5><a href="project6.html">Projects</a></h5>
+    </section>
+
+
+    <section>
+      <h3>Day 7: Differential Equations</h3>
+      <h4>Summary</h4>
+      <p>Introduced <tt>odeint</tt> as a way to numerically integrate a single or systems of ODEs. We also saw streamplots as a way to visualize systems of ODEs in the plane. As a first step towards PDEs, we went over the 1D <a href="http://en.wikipedia.org/wiki/Advection">advection equation</a> as an example of a hyperbolic PDE and looked at some basic finite difference methods to solve it numerically. We ended by looking at the Poisson equation as a model elliptic PDE. I showed a short demo of <a href="http://fenicsproject.org">FEniCS</a>, a tool greaded towards solving such problems using finite elements. As complementary tools, I also mentioned <a href="http://www.paraview.org">Paraview</a>, a powerful data visualizer, and <a href="https://www.cs.cmu.edu/~quake/triangle.html">Triangle</a>, a 2D mesh generator.</p>
+      <h5><a href="diffeq-notes.html">Notes</a></h5>
+      <h5><a href="diffeq.html">Exercises</a></h5>
+      <h5><a href="project7.html">Projects</a></h5>
+      <h5><a href="adv1d.py">Advection Demo</a></h5>
+    </section>
+
+    <section>
+      <h3>Day 8: Graph Computations</h3>
+      <h4>Summary</h4>
+      <p>Outline of directed and undirected graphs and how to work with them using NetworkX. Introduces a few fundamental graph algorithms such as traversal, shortest path, minimal spanning tree and maximum flow.</p>
+      <h5><a href="graphs.html">Notes</a></h5>
+      <h5><a href="project8.html">Projects</a></h5>
+      <h5><a href="employees.txt">Problem 2 - Employee Data</a></h5>
+      <h5><a href="friends.txt">Problem 2 - Survey Data</a></h5>
+    </section>
+
+    <section>
+      <h3>Day 9: Optimization</h3>
+      <h4>Summary</h4>
+      <p>Covered some basic tools from <tt>scipy.optimize</tt> for solving both unconstrained and constrained optimization problems. As I mentioned, since these have shown up in more recent versions of Scipy, I'm not aware of how they compete with most well-known tools such as the Matlab Optimization Toolbox or CVXOPT. With this in mind, be cautious about how you use them. As always, make sure you do a sanity check on your results and data when using them.</p>
+      <h5><a href="optimization-exercises.html">Exercises</a></h5>
+      <h5><a href="gaussians.txt">Gaussian Data</a></h5>
+    </section>
+
+    </div></div>
+
+    <div align="center"><div id="journal">
+    <h2>Conclusion</h2>
+
+    <p>That's it for this summer. Thank you for providing your attention over these last couple weeks. Also, special thanks to Ben Fulan and Pat Szuta for all their help in keeping things running smoothly!</p>
+
+	<small>Content developed and curated by Sean Shahkarami: sean.shahkarami@gmail.com</small>
+
+    </div></div>
+
+  </body>
+</html>
