@@ -12,7 +12,7 @@ website:
         file: "static/resume-sean-shahkarami.pdf"
     right:
       - icon: "envelope"
-        href: "mailto:sean.shahkarami@mgmail.com"
+        href: "mailto:sean.shahkarami@gmail.com"
       - icon: "github"
         href: "https://github.com/seanshahkarami"
 
