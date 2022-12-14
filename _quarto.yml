@@ -18,6 +18,7 @@ website:
 
 format:
   html:
-    theme: solar
+    # theme: simplex
+    theme: united
     css: styles.css
     toc: false
