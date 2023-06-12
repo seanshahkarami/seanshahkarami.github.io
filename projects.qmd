@@ -35,14 +35,8 @@ I got inspired to do a web port of Bongo Cat after seeing it animated on a Satis
 
 _The main reference I used was [this repo](https://github.com/pedker/OLED-BongoCat-Revision). Thanks so much!_
 
-### [Noice](https://github.com/seanshahkarami/seanshahkarami.github.io/blob/main/static/noice.py)
+### [Noice](https://huggingface.co/spaces/seanshahkarami/noice)
 
-[Streamlit](https://www.streamlit.io) example of generating cool images from random noise. To run
-it, you'll need make sure you have the required packages, then you can use "streamlit run" directly from the
-web.
+This is a [Streamlit](https://www.streamlit.io) app for generating cool images from random noise inspired by the [accidental noise library](https://accidentalnoise.sourceforge.net).
 
-```sh
-pip3 install numpy scipy matplotlib streamlit
-
-streamlit run https://raw.githubusercontent.com/seanshahkarami/seanshahkarami.github.io/main/static/noice.py
-```
+Try it out live on [Hugging Face Spaces](https://huggingface.co/spaces/seanshahkarami/noice)!
