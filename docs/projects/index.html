@@ -1,0 +1,23 @@
+<!DOCTYPE html><html lang="en"> <head><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.1.2"><title>Sean Shahkarami | Projects</title><style>*{box-sizing:border-box}@font-face{font-family:JosefinSans;src:url(/JosefinSans-VariableFont_wght.ttf)}html{margin:0;padding:0}body{margin:0;padding:24px;background:url(/celesestrellas.gif) repeat 0 0;background-color:#fff;font-family:JosefinSans;font-size:12pt}nav,article{margin:0 auto;padding:24px;max-width:700px;background-color:#3c3c5a;color:#fff;border:2px solid rgb(0,0,0);box-shadow:4px 4px #000}nav{text-align:center;display:flex;justify-content:space-evenly;padding-left:10%;padding-right:10%}p{text-align:justify;line-height:1.5}a{color:#fff;text-decoration:none}article a{border-bottom:2px dotted rgb(255,255,255)}
+</style></head> <body> <nav> <a href="/">Home</a> <a href="/projects/">Projects</a> <a href="/teaching/">Teaching</a> </nav> <br> <article> <p>These are things I’ve created that I think are cool.</p>
+<p><strong><a href="https://github.com/seanshahkarami/docker-image-pull-size">Docker Data Pull Estimator</a></strong></p>
+<p>This is a tool I wrote to (approximately) answer the question “How much data is needed to
+pull a Docker image?”</p>
+<p>The interesting bit of this is keeping track of the shared layers between images and giving
+a useful summary to the user at each step.</p>
+<p>This was motivated at my job with the <a href="https://sagecontinuum.org">Sage</a> project. Our team and users
+build on top of a core set of Docker base images. Some of are quite large (~5GB), so we try to preload them on our
+edge devices to reduce network bandwidth. This tool allowed me to quickly simulate the data cost of a series of
+pulls with various preload strategies.</p>
+<p><strong><a href="https://github.com/seanshahkarami/probe-memory-model">Probe Memory Model</a></strong></p>
+<p>A tool which implements a few of the memory model probes discussed in <a href="https://research.swtch.com/hwmm">Russ Cox’s fantastic “Hardware Memory Models” blog post</a>.</p>
+<p><strong><a href="/mooseheart.html">Mooseheart</a></strong></p>
+<p>A cute “screensaver” which generates a random night sky each time you click on it.</p>
+<p><strong><a href="/tracy.html">Tracy</a></strong></p>
+<p>A basic ray tracer which displays some nice looking metallic spheres.</p>
+<p><strong><a href="/bongo.html">Bongo</a></strong></p>
+<p>I got inspired to do a web port of Bongo Cat after seeing it animated on a Satisfaction 75 keyboard. Type away… :)</p>
+<p><em>The main reference I used was <a href="https://github.com/pedker/OLED-BongoCat-Revision">this repo</a>. Thanks so much!</em></p>
+<p><strong><a href="https://huggingface.co/spaces/seanshahkarami/noice">Noice</a></strong></p>
+<p>This is a <a href="https://www.streamlit.io">Streamlit</a> app for generating cool images from random noise inspired by the <a href="https://accidentalnoise.sourceforge.net">accidental noise library</a>.</p>
+<p>Try it out live on <a href="https://huggingface.co/spaces/seanshahkarami/noice">Hugging Face Spaces</a>!</p> </article> </body></html>

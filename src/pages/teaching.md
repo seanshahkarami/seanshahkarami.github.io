@@ -1,8 +1,9 @@
 ---
-title: "Teaching"
+layout: ../layouts/Layout.astro
+title: Teaching
 ---
 
-### [CBMG 2015](https://seanshahkarami.info/cbmg-2015/)
+**[CBMG 2015](https://seanshahkarami.info/cbmg-2015/)**
 
 This is material for a two week intensive course on programming and scientific computing I developed
 and led in summer 2015 for math grad students at University of Illinois at Urbana-Champaign.
