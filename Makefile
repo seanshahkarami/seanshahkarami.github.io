@@ -3,5 +3,5 @@ build:
 
 publish: build
 	git add docs
-	git commit . -m "update"
+	git commit docs -m "update"
 	git push
