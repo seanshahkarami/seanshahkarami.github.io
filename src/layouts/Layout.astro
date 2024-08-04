@@ -11,7 +11,7 @@ const { title } = Astro.props.frontmatter;
     </head>
     <body class="bg-slate-50">
         <header
-            class="flex flex-wrap justify-between items-center p-6 text-white bg-slate-700 shadow-md"
+            class="flex flex-wrap justify-between items-center p-6 text-slate-50 bg-slate-700 shadow-md"
         >
             <div class="text-2xl font-bold">
                 <a href="/">Sean Shahkarami</a>
@@ -30,7 +30,9 @@ const { title } = Astro.props.frontmatter;
                 </ul>
             </nav>
         </header>
-        <main class="p-8 lg:py-12 mx-auto prose prose-lg prose-slate">
+        <main
+            class="p-8 lg:py-12 mx-auto prose prose-lg prose-slate prose-a:text-teal-600 hover:prose-a:text-teal-500"
+        >
             <slot />
         </main>
     </body>
