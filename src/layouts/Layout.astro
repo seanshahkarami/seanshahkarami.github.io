@@ -30,10 +30,8 @@ const { title } = Astro.props.frontmatter;
                 </ul>
             </nav>
         </header>
-        <main class="p-8 mx-auto max-w-3xl">
-            <article class="prose prose-lg">
-                <slot />
-            </article>
+        <main class="p-8 mx-auto max-w-3xl prose prose-lg prose-slate">
+            <slot />
         </main>
     </body>
 </html>
