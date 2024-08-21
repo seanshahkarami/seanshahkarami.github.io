@@ -5,7 +5,7 @@ title: Resume
 
 ## Skills
 
-__Development:__ Python, Go, Bash, Javascript, SQL, Linux, Docker, Kubernetes
+__Development:__ Python, Go, Bash, Javascript, SQL, Astro, Django, Linux, Docker, Kubernetes
 
 __AI / Machine Learning:__ PyTorch, fastai, Scikit-learn, Pandas, Numpy, Scipy
 
