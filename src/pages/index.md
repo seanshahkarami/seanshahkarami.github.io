@@ -3,7 +3,7 @@ layout: ../layouts/Layout.astro
 title: Home
 ---
 
-Hello! I’m Sean Shahkarami!
+Hello! I’m <u>Sean Shahkarami</u>!
 
 I’m a software engineer and have been an avid programmer since the mid 2000s where I wrote Ruby code to make MMOs in RPG Maker XP. My formal education is in pure and applied math with a strong emphasis on computing.
 
